@@ -1,18 +1,11 @@
-import { CssBaseline, ThemeProvider } from "@mui/material";
-
-import { ColorModeContext, useThemeMode } from "./context/ColorModeContext";
 import "./App.css";
+import DashboardLayout from "./components/layouts/DashboardLayout";
 
 function App() {
-  const [theme, colorMode] = useThemeMode();
-
   return (
-    <ColorModeContext.Provider value={colorMode}>
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
-        <h1>React + Vite App</h1>
-      </ThemeProvider>
-    </ColorModeContext.Provider>
+    <DashboardLayout>
+      <h1>React + Vite App</h1>
+    </DashboardLayout>
   );
 }
 
