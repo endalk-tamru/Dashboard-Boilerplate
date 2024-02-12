@@ -1,11 +1,12 @@
 import { useState } from "react";
+import { Outlet } from "react-router-dom";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 
 import NavBar from "./NavBar";
 import SideBar from "./SideBar";
 
-export default function DashboardLayout({ children }) {
+export default function DashboardLayout() {
   const drawerWidth = 240;
   const [openDrawer, setOpenDrawer] = useState(false);
 
@@ -27,7 +28,7 @@ export default function DashboardLayout({ children }) {
 
       <Box component="main" sx={{ p: 3 }}>
         <Toolbar />
-        {children}
+        <Outlet />
       </Box>
     </Box>
   );
