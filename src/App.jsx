@@ -1,12 +1,10 @@
+import { RouterProvider } from "react-router-dom";
 import "./App.css";
-import DashboardLayout from "./components/layouts/DashboardLayout";
+
+import { router } from "./routes/routes";
 
 function App() {
-  return (
-    <DashboardLayout>
-      <h1>React + Vite App</h1>
-    </DashboardLayout>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;

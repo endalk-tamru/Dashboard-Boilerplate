@@ -25,6 +25,7 @@ export default function (userRole = {}) {
     },
     {
       id: Math.random(),
+      to: "/reports",
       label: "Reports",
       permission: true,
       // icon: <BarChartIcon />,
